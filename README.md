@@ -16,7 +16,5 @@ git remote add origin <Azure DevOps Repo URL>.git
 
 git push -u origin --all
 
-
-
 git pull
 
