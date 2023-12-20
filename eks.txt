@@ -1,0 +1,32 @@
+------------ install eksctl ----------------
+   curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+=======================================================
+
+eksctl create cluster --name my-eks --region us-east-1
+
+this will create a eks cluster with 2  nodes by default
+========================================================
+eksctl create cluster \
+  --name your-cluster-name \
+  --version 1.21 \
+  --region your-region \
+  --nodegroup-name standard-workers \
+  --node-type t3.medium \
+  --nodes 2 \
+  --nodes-min 1 \
+  --nodes-max 3 \
+  --managed \
+  --eksctl-version 0.55.0
+==========================================================
+
+---------install the kubectl ------------
+
+# Download kubectl
+curl -LO "https://dl.k8s.io/release/v1.21.0/bin/linux/amd64/kubectl"
+
+# Make kubectl executable
+chmod +x kubectl
+
+# Move kubectl to a directory in your PATH
+sudo mv kubectl /usr/local/bin/
+==============================================================
